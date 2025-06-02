@@ -26,9 +26,9 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('role')->default('3')->comment('1=Root, 2=Root user1, 3=Root user2, 4=Reseller, 5=User');
             $table->tinyInteger('position')->nullable();
             $table->tinyInteger('employee_limit')->default(2);
-            $table->string('flexiload_type')->default('0')->comment('In string describe each number to determine hows eligible ...'));
+            $table->string('flexiload_type')->default('0')->comment('In string describe each number to determine hows eligible ...');
             $table->mediumInteger('flexiload_limit')->default('10000')->comment('Minimum balance amount to make a load   ');
-            $table->float('flexiload_commission')->default(0)->comment('flexiload commission')
+            $table->float('flexiload_commission')->default(0)->comment('flexiload commission');
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();

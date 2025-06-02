@@ -76,6 +76,9 @@ Route::namespace('Admin')->name('admin.')->middleware(['auth', 'RoleRoot'])->pre
     Route::get('api-permission-suspend/{id}','ApiPermissionController@api_user_suspend')->name('api-permission-suspend');
 
     Route::get('api-add','ApiAddController@api_add')->name('api-add');
+    Route::post('api-add-insert','ApiAddController@api_add_insert')->name('api-add-insert');
+    Route::get('api-status-active/{id}','ApiAddController@api_status_active')->name('api-status-active');
+    Route::get('api-status-suspend/{id}','ApiAddController@api_status_suspend')->name('api-status-suspend');
 
     Route::get('dynamic-permission','DynamicPermissionController@dynamic_user')->name('dynamic-permission');
     Route::get('dynamic-permission-active/{id}','DynamicPermissionController@dynamic_user_active')->name('dynamic-permission-active');
